@@ -40,23 +40,6 @@ public class TypeTemplateController {
             return new Result(false,"失败");
         }
     }
-    //修改
-    @RequestMapping("/update")
-    public Result update(@RequestBody TypeTemplate tt){
-
-        try {
-            typeTemplateService.update(tt);
-            return new Result(true,"成功");
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new Result(false,"失败");
-        }
-    }
-    //查询一个模板对象
-    @RequestMapping("/findOne")
-    public TypeTemplate findOne(Long id){
-        return typeTemplateService.findOne(id);
-    }
 
     //查询模板对象 中规格集合 返回值 List<Map>
     @RequestMapping("/findBySpecList")
