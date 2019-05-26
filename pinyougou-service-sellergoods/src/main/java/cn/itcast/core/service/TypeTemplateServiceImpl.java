@@ -38,6 +38,13 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
     private SpecificationOptionDao specificationOptionDao;
     @Autowired
     private RedisTemplate redisTemplate;
+    @Autowired
+    private JmsTemplate jmsTemplate;
+    @Autowired
+    private Destination topicPageAndSolrDestination;
+    @Autowired
+    private Destination queueSolrDeleteDestination;
+
 
     @Override
     public PageResult search(Integer page, Integer rows, TypeTemplate tt) {
@@ -126,12 +133,7 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
         return listMap;
     }
 
-    @Autowired
-    private JmsTemplate jmsTemplate;
-    @Autowired
-    private Destination topicPageAndSolrDestination;
-    @Autowired
-    private Destination queueSolrDeleteDestination;
+
     //开始审核
     @Override
     public void updateStatus(Long[] ids, String status) {
