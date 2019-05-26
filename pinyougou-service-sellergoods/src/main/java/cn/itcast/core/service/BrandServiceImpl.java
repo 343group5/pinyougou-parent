@@ -32,7 +32,7 @@ public class BrandServiceImpl implements BrandService {
 
         //分页小助手
         PageHelper.startPage(pageNum,pageSize);
-
+        //创建对象
         BrandQuery brandQuery = new BrandQuery();
         BrandQuery.Criteria criteria = brandQuery.createCriteria();
 
