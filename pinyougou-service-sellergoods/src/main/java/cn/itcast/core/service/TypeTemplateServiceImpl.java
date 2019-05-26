@@ -2,7 +2,10 @@ package cn.itcast.core.service;
 
 import cn.itcast.core.dao.specification.SpecificationOptionDao;
 import cn.itcast.core.dao.template.TypeTemplateDao;
+<<<<<<< HEAD
 import cn.itcast.core.pojo.good.Goods;
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 import cn.itcast.core.pojo.specification.SpecificationOption;
 import cn.itcast.core.pojo.specification.SpecificationOptionQuery;
 import cn.itcast.core.pojo.template.TypeTemplate;
@@ -14,6 +17,7 @@ import com.github.pagehelper.PageHelper;
 import entity.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+<<<<<<< HEAD
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,6 +26,10 @@ import javax.jms.Destination;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;
+=======
+import org.springframework.transaction.annotation.Transactional;
+
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 import java.util.List;
 import java.util.Map;
 
@@ -38,6 +46,7 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
     private SpecificationOptionDao specificationOptionDao;
     @Autowired
     private RedisTemplate redisTemplate;
+<<<<<<< HEAD
     @Autowired
     private JmsTemplate jmsTemplate;
     @Autowired
@@ -45,6 +54,8 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
     @Autowired
     private Destination queueSolrDeleteDestination;
 
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 
     @Override
     public PageResult search(Integer page, Integer rows, TypeTemplate tt) {
@@ -132,6 +143,7 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
         put(options,List)*/
         return listMap;
     }
+<<<<<<< HEAD
 
 
     //开始审核
@@ -161,4 +173,6 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
     }
 
 
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 }

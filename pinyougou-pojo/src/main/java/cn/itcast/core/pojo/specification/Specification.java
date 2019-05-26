@@ -13,11 +13,14 @@ public class Specification implements Serializable {
      */
     private String specName;
 
+<<<<<<< HEAD
     /**
      * 名称
      */
     private String auditStatus;
 
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
     private static final long serialVersionUID = 1L;
 
     public Long getId() {
@@ -36,6 +39,7 @@ public class Specification implements Serializable {
         this.specName = specName == null ? null : specName.trim();
     }
 
+<<<<<<< HEAD
     public String getAuditStatus() {
         return auditStatus;
     }
@@ -44,6 +48,8 @@ public class Specification implements Serializable {
         this.auditStatus = auditStatus;
     }
 
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -52,7 +58,10 @@ public class Specification implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", specName=").append(specName);
+<<<<<<< HEAD
         sb.append(", auditStatus=").append(auditStatus);
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
@@ -71,8 +80,12 @@ public class Specification implements Serializable {
         }
         Specification other = (Specification) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
+<<<<<<< HEAD
             && (this.getSpecName() == null ? other.getSpecName() == null : this.getSpecName().equals(other.getSpecName())
             && (this.getAuditStatus() == null ? other.getAuditStatus() == null : this.getAuditStatus().equals(other.getAuditStatus())));
+=======
+            && (this.getSpecName() == null ? other.getSpecName() == null : this.getSpecName().equals(other.getSpecName()));
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
     }
 
     @Override
@@ -81,7 +94,10 @@ public class Specification implements Serializable {
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
         result = prime * result + ((getSpecName() == null) ? 0 : getSpecName().hashCode());
+<<<<<<< HEAD
         result = prime * result + ((getAuditStatus() == null) ? 0 : getAuditStatus().hashCode());
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
         return result;
     }
 }

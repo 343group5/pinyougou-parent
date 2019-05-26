@@ -6,9 +6,13 @@
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="spec_ids" property="specIds" jdbcType="VARCHAR" />
     <result column="brand_ids" property="brandIds" jdbcType="VARCHAR" />
+<<<<<<< HEAD
     <result column="auditStatus" property="auditStatus" jdbcType="VARCHAR" />
     <result column="custom_attribute_items" property="customAttributeItems" jdbcType="VARCHAR" />
 
+=======
+    <result column="custom_attribute_items" property="customAttributeItems" jdbcType="VARCHAR" />
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -70,7 +74,11 @@
   </sql>
   <sql id="Base_Column_List" >
     <if test="fields == null" >
+<<<<<<< HEAD
       id, name, spec_ids, brand_ids,auditStatus,custom_attribute_items
+=======
+      id, name, spec_ids, brand_ids, custom_attribute_items
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
     </if>
     <if test="fields != null" >
       ${fields}
@@ -92,7 +100,11 @@
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
+<<<<<<< HEAD
     id,name,spec_ids,brand_ids,auditStatus,custom_attribute_items
+=======
+    id,name,spec_ids,brand_ids,custom_attribute_items
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
     from tb_type_template
     where id = #{id,jdbcType=BIGINT}
   </select>
@@ -108,9 +120,15 @@
   </delete>
   <insert id="insert" parameterType="cn.itcast.core.pojo.template.TypeTemplate" >
     insert into tb_type_template (id, name, spec_ids, 
+<<<<<<< HEAD
       brand_ids,auditStatus, custom_attribute_items)
     values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{specIds,jdbcType=VARCHAR}, 
       #{brandIds,jdbcType=VARCHAR}, #{auditStatus,jdbcType=VARCHAR}, #{customAttributeItems,jdbcType=VARCHAR})
+=======
+      brand_ids, custom_attribute_items)
+    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{specIds,jdbcType=VARCHAR}, 
+      #{brandIds,jdbcType=VARCHAR}, #{customAttributeItems,jdbcType=VARCHAR})
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
   </insert>
   <insert id="insertSelective" parameterType="cn.itcast.core.pojo.template.TypeTemplate" >
     insert into tb_type_template
@@ -127,9 +145,12 @@
       <if test="brandIds != null" >
         brand_ids,
       </if>
+<<<<<<< HEAD
       <if test="auditStatus != null" >
         brand_ids,
       </if>
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
       <if test="customAttributeItems != null" >
         custom_attribute_items,
       </if>
@@ -147,10 +168,13 @@
       <if test="brandIds != null" >
         #{brandIds,jdbcType=VARCHAR},
       </if>
+<<<<<<< HEAD
 
       <if test="auditStatus != null" >
         #{brandIds,jdbcType=VARCHAR},
       </if>
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
       <if test="customAttributeItems != null" >
         #{customAttributeItems,jdbcType=VARCHAR},
       </if>
@@ -177,10 +201,13 @@
       <if test="record.brandIds != null" >
         brand_ids = #{record.brandIds,jdbcType=VARCHAR},
       </if>
+<<<<<<< HEAD
 
       <if test="record.auditStatus != null" >
         brand_ids = #{record.auditStatus,jdbcType=VARCHAR},
       </if>
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
       <if test="record.customAttributeItems != null" >
         custom_attribute_items = #{record.customAttributeItems,jdbcType=VARCHAR},
       </if>
@@ -189,14 +216,20 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
   <update id="updateByExample" parameterType="map" >
     update tb_type_template
     set id = #{record.id,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
       spec_ids = #{record.specIds,jdbcType=VARCHAR},
       brand_ids = #{record.brandIds,jdbcType=VARCHAR},
+<<<<<<< HEAD
       auditStatus = #{record.auditStatus,jdbcType=VARCHAR},
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
       custom_attribute_items = #{record.customAttributeItems,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -214,9 +247,12 @@
       <if test="brandIds != null" >
         brand_ids = #{brandIds,jdbcType=VARCHAR},
       </if>
+<<<<<<< HEAD
       <if test="auditStatus != null" >
         auditStatus = #{auditStatus,jdbcType=VARCHAR},
       </if>
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
       <if test="customAttributeItems != null" >
         custom_attribute_items = #{customAttributeItems,jdbcType=VARCHAR},
       </if>
@@ -226,8 +262,13 @@
   <update id="updateByPrimaryKey" parameterType="cn.itcast.core.pojo.template.TypeTemplate" >
     update tb_type_template
     set name = #{name,jdbcType=VARCHAR},
+<<<<<<< HEAD
        spec_ids = #{specIds,jdbcType=VARCHAR},
        auditStatus = #{auditStatus,jdbcType=VARCHAR},
+=======
+      spec_ids = #{specIds,jdbcType=VARCHAR},
+      brand_ids = #{brandIds,jdbcType=VARCHAR},
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
       custom_attribute_items = #{customAttributeItems,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>

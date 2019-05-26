@@ -23,6 +23,12 @@ import java.util.Map;
 @Transactional
 public class BrandServiceImpl implements BrandService {
 
+<<<<<<< HEAD
+=======
+    /**
+     * 注入
+     */
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
     @Autowired
     private BrandDao brandDao;
 
@@ -32,7 +38,11 @@ public class BrandServiceImpl implements BrandService {
 
         //分页小助手
         PageHelper.startPage(pageNum,pageSize);
+<<<<<<< HEAD
         //创建对象
+=======
+
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
         BrandQuery brandQuery = new BrandQuery();
         BrandQuery.Criteria criteria = brandQuery.createCriteria();
 

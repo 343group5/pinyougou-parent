@@ -113,6 +113,7 @@ app.controller('typeTemplateController' ,function($scope,$controller,brandServic
 	$scope.deleteTableRow = function(index){
 		$scope.entity.customAttributeItems.splice(index,1);
 	}
+<<<<<<< HEAD
 
     // 显示分类:
     $scope.findItemCatList = function(){
@@ -150,4 +151,6 @@ app.controller('typeTemplateController' ,function($scope,$controller,brandServic
         });
     }
 
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 });	

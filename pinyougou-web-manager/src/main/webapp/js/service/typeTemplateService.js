@@ -28,9 +28,13 @@ app.service('typeTemplateService',function($http){
 	//搜索
 	this.search=function(page,rows,searchEntity){
 		return $http.post('../typeTemplate/search.do?page='+page+"&rows="+rows, searchEntity);
+<<<<<<< HEAD
 	}
     //更改状态
     this.updateStatus = function(ids,status){
         return $http.get('../typeTemplate/updateStatus.do?ids='+ids+"&status="+status);
     }
+=======
+	}    	
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 });

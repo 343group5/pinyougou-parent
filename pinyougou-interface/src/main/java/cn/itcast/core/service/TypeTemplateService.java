@@ -16,6 +16,9 @@ public interface TypeTemplateService {
     void update(TypeTemplate tt);
 
     List<Map> findBySpecList(Long id);
+<<<<<<< HEAD
 
     void updateStatus(Long []ids,String status);
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 }

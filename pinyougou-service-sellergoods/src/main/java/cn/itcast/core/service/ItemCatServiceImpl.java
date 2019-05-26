@@ -1,13 +1,28 @@
 package cn.itcast.core.service;
 
 import cn.itcast.core.dao.item.ItemCatDao;
+<<<<<<< HEAD
+=======
+import cn.itcast.core.pojo.good.Goods;
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 import cn.itcast.core.pojo.item.ItemCat;
 import cn.itcast.core.pojo.item.ItemCatQuery;
 import com.alibaba.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+<<<<<<< HEAD
 import org.springframework.transaction.annotation.Transactional;
 
+=======
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.jms.Destination;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.Session;
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 import java.util.List;
 
 /**
@@ -49,4 +64,43 @@ public class ItemCatServiceImpl implements  ItemCatService {
     public List<ItemCat> findAll() {
         return itemCatDao.selectByExample(null);
     }
+<<<<<<< HEAD
+=======
+    @Autowired
+    private JmsTemplate jmsTemplate;
+    @Autowired
+    private Destination topicPageAndSolrDestination;
+    @Autowired
+    private Destination queueSolrDeleteDestination;
+    //开始审核
+    @Override
+    public void updateStatus(Long[] ids, String status) {
+        ItemCat itemCat = new ItemCat();
+        itemCat.setAuditStatus(status);
+        for (Long id : ids) {
+            System.out.println(id);
+            itemCat.setId(id);
+            //1:更改分类状态
+            itemCatDao.updateByPrimaryKeySelective(itemCat);
+            //只有在审核通过的时候才会执行下面处理
+            if("1".equals(status)){
+
+                //发消息
+                jmsTemplate.send(topicPageAndSolrDestination, new MessageCreator() {
+                    @Override
+                    public Message createMessage(Session session) throws JMSException {
+                        return session.createTextMessage(String.valueOf(id));
+                    }
+                });
+
+
+
+
+
+            }
+
+        }
+
+    }
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 }

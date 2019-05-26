@@ -10,4 +10,9 @@ public interface ItemCatService {
     ItemCat findOne(Long id);
 
     List<ItemCat> findAll();
+<<<<<<< HEAD
+=======
+
+    void updateStatus(Long[] ids, String status);
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 }

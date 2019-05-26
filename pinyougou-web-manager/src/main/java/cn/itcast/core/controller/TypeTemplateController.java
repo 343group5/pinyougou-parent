@@ -58,6 +58,7 @@ public class TypeTemplateController {
         return typeTemplateService.findOne(id);
     }
 
+<<<<<<< HEAD
     //更新状态   审核通过  或驳回
     @RequestMapping(value = "/updateStatus.do")
     public Result updateStatus(Long[] ids,String status){
@@ -71,4 +72,6 @@ public class TypeTemplateController {
     }
 
 
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 }

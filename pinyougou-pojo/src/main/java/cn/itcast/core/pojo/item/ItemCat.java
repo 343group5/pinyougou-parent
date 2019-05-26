@@ -1,6 +1,10 @@
 package cn.itcast.core.pojo.item;
 
 import java.io.Serializable;
+<<<<<<< HEAD
+=======
+import java.util.Objects;
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 
 public class ItemCat implements Serializable {
     /**
@@ -22,6 +26,11 @@ public class ItemCat implements Serializable {
      * 类型id
      */
     private Long typeId;
+<<<<<<< HEAD
+=======
+    //状态
+    private String auditStatus;
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 
     private static final long serialVersionUID = 1L;
 
@@ -57,6 +66,7 @@ public class ItemCat implements Serializable {
         this.typeId = typeId;
     }
 
+<<<<<<< HEAD
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -88,10 +98,43 @@ public class ItemCat implements Serializable {
             && (this.getParentId() == null ? other.getParentId() == null : this.getParentId().equals(other.getParentId()))
             && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
             && (this.getTypeId() == null ? other.getTypeId() == null : this.getTypeId().equals(other.getTypeId()));
+=======
+    public String getAuditStatus() {
+        return auditStatus;
+    }
+
+    public void setAuditStatus(String auditStatus) {
+        this.auditStatus = auditStatus;
+    }
+
+    @Override
+    public String toString() {
+        return "ItemCat{" +
+                "id=" + id +
+                ", parentId=" + parentId +
+                ", name='" + name + '\'' +
+                ", typeId=" + typeId +
+                ", auditStatus='" + auditStatus + '\'' +
+                '}';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ItemCat itemCat = (ItemCat) o;
+        return Objects.equals(id, itemCat.id) &&
+                Objects.equals(parentId, itemCat.parentId) &&
+                Objects.equals(name, itemCat.name) &&
+                Objects.equals(typeId, itemCat.typeId) &&
+                Objects.equals(auditStatus, itemCat.auditStatus);
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
     }
 
     @Override
     public int hashCode() {
+<<<<<<< HEAD
         final int prime = 31;
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
@@ -99,5 +142,9 @@ public class ItemCat implements Serializable {
         result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
         result = prime * result + ((getTypeId() == null) ? 0 : getTypeId().hashCode());
         return result;
+=======
+
+        return Objects.hash(id, parentId, name, typeId, auditStatus);
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
     }
 }

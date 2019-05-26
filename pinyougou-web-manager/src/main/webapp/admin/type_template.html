@@ -54,6 +54,7 @@
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-default" title="新建" ng-click="entity={customAttributeItems:[]}"  data-toggle="modal" data-target="#editModal" ><i class="fa fa-file-o"></i> 新建</button>
                                         <button type="button" class="btn btn-default" ng-click="dele()" title="删除"><i class="fa fa-trash-o"></i> 删除</button>
+<<<<<<< HEAD
 										<button type="button" ng-click="updateStatus('1')" class="btn btn-default" title="审核通过" ><i class="fa fa-check"></i> 审核通过</button>
 										<button type="button" ng-click="updateStatus('2')" class="btn btn-default" title="驳回" ><i class="fa fa-ban"></i> 驳回</button>
 										<button type="button" class="btn btn-default" title="刷新" onclick="window.location.reload();"><i class="fa fa-refresh"></i> 刷新</button>
@@ -72,6 +73,13 @@
 										</select>
 								</div>
 							</div>
+=======
+                                       
+                                        <button type="button" class="btn btn-default" title="刷新" onclick="window.location.reload();"><i class="fa fa-refresh"></i> 刷新</button>
+                                    </div>
+                                </div>
+                            </div>
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
                             <div class="box-tools pull-right">
                                 <div class="has-feedback">
 							                  分类模板名称：<input  >									
@@ -90,10 +98,16 @@
 										  <th class="sorting_asc">模板ID</th>
 									      <th class="sorting">分类模板名称</th>
 									      <th class="sorting">关联品牌</th>
+<<<<<<< HEAD
 									      <th class="sorting">关联规格</th>
 									      <th class="sorting">扩展属性</th>
 										  <th class="sorting">状态</th>
 										  <th class="text-center">操作</th>
+=======
+									      <th class="sorting">关联规格</th>									     
+									      <th class="sorting">扩展属性</th>													     						
+					                      <th class="text-center">操作</th>
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 			                          </tr>
 			                      </thead>
 			                      <tbody>
@@ -103,6 +117,7 @@
 									      <td>{{entity.name}}</td>
 									      <td>{{jsonToString(entity.brandIds,'text')}}</td>
 									      <td>{{jsonToString(entity.specIds,'text')}}</td>									 
+<<<<<<< HEAD
 									      <td>{{jsonToString(entity.customAttributeItems,'text')}}</td>
 										  <td>
 		                                  	<span>
@@ -111,6 +126,10 @@
 
 										  </td>
 										  <td class="text-center">
+=======
+									      <td>{{jsonToString(entity.customAttributeItems,'text')}}</td>		                                                                  
+		                                  <td class="text-center">                                           
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 		                                 	  <button type="button" class="btn bg-olive btn-xs" ng-click="findOne(entity.id)" data-toggle="modal" data-target="#editModal" >修改</button>                                           
 		                                  </td>
 			                          </tr>
@@ -158,12 +177,16 @@
 		      			<input select2 select2-model="entity.brandIds" config="brandList" multiple placeholder="支持多选哦" class="form-control" type="text"/>
 		      		</td>
 		      	</tr>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 		      	<tr>
 		      		<td>关联规格</td>
 		      		<td>
 						<input select2 select2-model="entity.specIds" config="specList" multiple placeholder="支持多选哦" class="form-control" type="text"/>
 		      		</td>
+<<<<<<< HEAD
 		      	</tr>
 
 				<tr>
@@ -173,6 +196,10 @@
 					</td>
 				</tr>
 
+=======
+		      	</tr>	
+		      	
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 		      	<tr>
 		      		<td>扩展属性</td>
 		      		<td>

@@ -29,8 +29,13 @@ app.service('goodsService',function($http){
 	this.search=function(page,rows,searchEntity){
 		return $http.post('../goods/search.do?page='+page+"&rows="+rows, searchEntity);
 	}
+<<<<<<< HEAD
     //更改状态
     this.updateStatus = function(ids,status){
+=======
+	//更新状态
+	this.updateStatus = function(ids,status){
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 		return $http.get('../goods/updateStatus.do?ids='+ids+"&status="+status);
 	}
 });

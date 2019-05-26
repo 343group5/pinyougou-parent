@@ -76,6 +76,23 @@ app.controller('itemCatController' ,function($scope,$controller   ,itemCatServic
 			}			
 		);
 	}
+<<<<<<< HEAD
+=======
+
+    // 显示状态
+    $scope.status = ["未审核","审核通过","审核未通过","关闭"];
+    // 审核的方法:
+    $scope.updateStatus = function(status){
+        itemCatService.updateStatus($scope.selectIds,status).success(function(response){
+            if(response.flag){
+                $scope.reloadList();//刷新列表
+                $scope.selectIds = [];
+            }else{
+                alert(response.message);
+            }
+        });
+    }
+>>>>>>> 73002f8a2a5c268dfdf18fd51c676b1f11ec052a
 	
 	// 根据父ID查询分类
 	$scope.findByParentId =function(parentId){
